@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Arabia - Land of Wonders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-full flex items-center justify-center text-white font-bold text-xl glow">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <span class="ml-3 text-xl font-black gradient-text">Saudi Arabia</span>
+                </div>
+                
+                <div class="hidden lg:flex space-x-8">
+                    <a href="index.html" class="nav-link text-lg font-medium active">Home</a>
+                    <a href="#about" class="nav-link text-lg font-medium active">About</a>
+                    <a href="#discover" class="nav-link text-lg font-medium">Discover</a>
+                    <a href="#Places" class="nav-link text-lg font-medium">Places</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="theme-toggle p-2 rounded-full transition">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                    
+                    <div class="lg:hidden">
+                        <button id="menu-toggle" class="text-[var(--dark-brown)] dark:text-[var(--light-brown)] focus:outline-none text-xl">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-6 pb-4 space-y-4">
+                <a href="index.html" class="block py-2 text-lg font-medium border-l-4 border-[var(--primary)] pl-4 active">Home</a>
+                <a href="#about" class="block py-2 text-lg font-medium">About</a>
+                <a href="#discover" class="block py-2 text-lg font-medium">Discover</a>
+                <a href="#Places" class="block py-2 text-lg font-medium">Places</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden text-white">
+        <div class="absolute inset-0 bg-gradient-to-t from-[var(--dark)] to-transparent z-0"></div>
+        
+        <div class="container mx-auto px-4 text-center z-10">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 fade-in">
+                Saudi Arabia
+            </h1>
+            <p class="text-2xl md:text-4xl mb-8 font-bold fade-in">
+                Land of <span class="gradient-text">Wonders</span>
+            </p>
+            <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto fade-in">
+                Discover a land of captivating contrasts, where golden deserts meet azure seas, and ancient heritage blends with modern innovation.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6 mt-10 fade-in">
+              <a href="#Places"> <button class="bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] hover:from-[var(--accent)] hover:to-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition duration-500 transform hover:scale-105 glow">
+                    Begin Your Journey
+                </button></a> 
+              
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 floating">
+            <a href="#featured" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Hero -->
+    <section id="about" class="py-20 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">About Saudi Arabia</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">A land of ancient civilizations and future aspirations</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
+                <div class="lg:w-1/2 slide-in-left">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1586724237565-7c5a8f5c6f48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Saudi Arabia" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 slide-in-right">
+                    <h2 class="text-3xl md:text-4xl font-black mb-6 gradient-text">Land of History and Culture</h2>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        Saudi Arabia is the heart of the Arab and Islamic world, possessing a unique historical and cultural richness that spans thousands of years. From the archaeological sites of Al-Ula to the skyscrapers of Riyadh, the Kingdom forms a magnificent tapestry of past and present.
+                    </p>
+                    <p class="mb-8 text-lg leading-relaxed">
+                        Within the framework of the ambitious Vision 2030, the Kingdom is witnessing a comprehensive developmental renaissance aimed at enhancing the tourism sector and making the Kingdom a leading global destination.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                        <div class="glass p-5 rounded-xl card-hover">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-[var(--primary)] p-2 rounded-full mr-3">
+                                    <i class="fas fa-map-marked-alt text-white"></i>
+                                </div>
+                                <h4 class="font-bold text-lg">Vast Area</h4>
+                            </div>
+                            <p class="text-sm">Largest country in the Middle East with an area exceeding 2 million km²</p>
+                        </div>
+                        
+                        <div class="glass p-5 rounded-xl card-hover">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-[var(--accent)] p-2 rounded-full mr-3">
+                                    <i class="fas fa-landmark text-white"></i>
+                                </div>
+                                <h4 class="font-bold text-lg">World Heritage</h4>
+                            </div>
+                            <p class="text-sm">6 sites registered in the UNESCO World Heritage List</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </div>
+    </section>
+<!-- Discover Hero -->
+    <section id="discover" class="py-20 bg-gradient-to-br from-[var(--secondary)] to-[var(--primary)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">Discover Saudi Arabia</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Explore the diverse aspects that make Saudi Arabia unique</p>
+        </div>
+    </section>
+
+    <!-- Discover Cards -->
+    <section class="py-16 light-[var(--light-brown)] dark:bg-[var(--dark)]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 section-title">Explore Our Culture</h2>
+                <p class="text-lg max-w-2xl mx-auto">Dive into the rich experiences Saudi Arabia has to offer</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover card-expand fade-in">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1981&q=80" 
+                             alt="Saudi Food" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-3">Saudi Cuisine</h3>
+                        <p class="mb-4">Discover the rich flavors and traditional dishes of Saudi Arabia</p>
+                        <a href="discover-food.html" class="inline-flex items-center text-[var(--primary)] dark:text-[var(--accent)] font-medium">
+                            Explore Food <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover card-expand fade-in">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1547996167-8d47ccf3c266?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Seasons" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-3">Best Seasons</h3>
+                        <p class="mb-4">Find the perfect time to visit based on weather and activities</p>
+                        <a href="discover-season.html" class="inline-flex items-center text-[var(--primary)] dark:text-[var(--accent)] font-medium">
+                            View Seasons <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover card-expand fade-in">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578558422230-4d0194e1441c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Travel Planning" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-3">Travel Planning</h3>
+                        <p class="mb-4">Everything you need to know to plan your perfect Saudi trip</p>
+                        <a href="discover-planning.html" class="inline-flex items-center text-[var(--primary)] dark:text-[var(--accent)] font-medium">
+                            Plan Your Trip <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places Hero -->
+    <section id="Places" class="py-20 bg-gradient-to-br from-[var(--accent)] to-[var(--secondary)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">Places to Visit</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Discover the stunning destinations across Saudi Arabia</p>
+        </div>
+    </section>
+
+    <!-- Places Cards -->
+    <section class="py-16 light-[var(--light-brown)] dark:bg-[var(--dark)]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 section-title">Explore Our Destinations</h2>
+                <p class="text-lg max-w-2xl mx-auto">From ancient historical sites to modern metropolitan cities</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover card-expand fade-in">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578558422230-4d0194e1441c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Jeddah" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-3">Jeddah</h3>
+                        <p class="mb-4">The Bride of the Red Sea with historic districts and modern attractions</p>
+                        <a href="places-jeddah.html" class="inline-flex items-center text-[var(--primary)] dark:text-[var(--accent)] font-medium">
+                            Explore Jeddah <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover card-expand fade-in">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571887259330-7d3a71ff9313?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                             alt="Riyadh" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-3">Riyadh</h3>
+                        <p class="mb-4">The modern capital blending ultra-modern architecture with traditional culture</p>
+                        <a href="places-riyadh.html" class="inline-flex items-center text-[var(--primary)] dark:text-[var(--accent)] font-medium">
+                            Discover Riyadh <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover card-expand fade-in">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1629363837246-8a4dcebad11c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80" 
+                             alt="Al-Ula" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-3">Al-Ula</h3>
+                        <p class="mb-4">A breathtaking archaeological site and open-air museum</p>
+                        <a href="places-alula.html" class="inline-flex items-center text-[var(--primary)] dark:text-[var(--accent)] font-medium">
+                            Visit Al-Ula <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-t from-[var(--dark)] to-[#050811] py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-6 lg:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-full flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <span class="ml-3 text-lg font-black gradient-text">Saudi Arabia</span>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Land of Wonders, Heart of Arabia</p>
+                </div>
+                
+              <div class="flex space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Home</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">About</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Discover</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Places</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Saudi Arabia Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

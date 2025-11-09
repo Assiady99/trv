@@ -1,0 +1,424 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.5s ease, opacity 0.5s ease;
+}
+
+:root {
+    --primary: #8B4513;
+    --secondary: #A0522D;
+    --accent: #D2691E;
+    --light-brown: #F5DEB3;
+    --dark-brown: #5D4037;
+    --dark: #2C1810;
+    --light: #FAF0E6;
+}
+
+/* ===== LIGHT MODE (DEFAULT) ===== */
+body {
+    background-color: var(--light);
+    color: var(--dark-brown);
+    min-height: 100vh;
+}
+
+/* Hero Background - Light Mode */
+.hero-bg {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.8) 0%, rgba(210, 105, 30, 0.4) 100%), 
+                url('https://images.unsplash.com/photo-1544628936-7a0e8e4c3b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Card Styles - Light Mode */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px -5px rgba(139, 69, 19, 0.25);
+}
+
+.glow {
+    box-shadow: 0 0 15px rgba(139, 69, 19, 0.4);
+}
+
+/* Glass Effect - Light Mode */
+.glass {
+    background: rgba(245, 222, 179, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+/* Section Title - Light Mode */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px;
+}
+
+/* Theme Toggle - Light Mode */
+.theme-toggle {
+    background: var(--light-brown);
+    color: var(--dark-brown);
+    border: none;
+    cursor: pointer;
+}
+
+/* Navigation - Light Mode */
+.nav-link {
+    position: relative;
+    color: var(--dark-brown);
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Background Colors - Light Mode */
+.bg-white {
+    background-color: white !important;
+}
+
+.bg-\[\#F5DEB3\] {
+    background-color: var(--light-brown) !important;
+}
+
+.bg-\[\#FAF0E6\] {
+    background-color: var(--light) !important;
+}
+
+/* Text Colors - Light Mode */
+.text-gray-600 {
+    color: #6b7280 !important;
+}
+
+.text-gray-700 {
+    color: #374151 !important;
+}
+
+.text-gray-800 {
+    color: #1f2937 !important;
+}
+
+.text-\[\#5D4037\] {
+    color: var(--dark-brown) !important;
+}
+
+.text-\[\#2C1810\] {
+    color: var(--dark) !important;
+}
+
+/* Custom CSS Variables for Text Colors - Light Mode */
+.text-\[var\(--primary\)\] {
+    color: var(--primary) !important;
+}
+
+.text-\[var\(--accent\)\] {
+    color: var(--accent) !important;
+}
+
+.text-\[var\(--dark-brown\)\] {
+    color: var(--dark-brown) !important;
+}
+
+.text-\[var\(--light-brown\)\] {
+    color: var(--light-brown) !important;
+}
+
+/* Timeline - Light Mode */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--light);
+    border: 4px solid var(--primary);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: var(--light-brown);
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: var(--dark-brown) !important;
+}
+
+/* ===== DARK MODE ===== */
+body.dark-mode {
+    background-color: var(--dark);
+    color: var(--light-brown);
+}
+
+/* Hero Background - Dark Mode */
+body.dark-mode .hero-bg {
+    background: linear-gradient(135deg, rgba(44, 24, 16, 0.9) 0%, rgba(139, 69, 19, 0.7) 100%), 
+                url('https://images.unsplash.com/photo-1544628936-7a0e8e4c3b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Card Styles - Dark Mode */
+body.dark-mode .card-hover:hover {
+    box-shadow: 0 15px 30px -5px rgba(245, 222, 179, 0.2);
+}
+
+body.dark-mode .glow {
+    box-shadow: 0 0 15px rgba(245, 222, 179, 0.3);
+}
+
+/* Glass Effect - Dark Mode */
+body.dark-mode .glass {
+    background: rgba(44, 24, 16, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(245, 222, 179, 0.2);
+}
+
+/* Section Title - Dark Mode */
+body.dark-mode .section-title::after {
+    background: linear-gradient(90deg, var(--accent), var(--secondary));
+}
+
+/* Theme Toggle - Dark Mode */
+body.dark-mode .theme-toggle {
+    background: var(--dark-brown);
+    color: var(--light-brown);
+}
+
+/* Navigation - Dark Mode */
+body.dark-mode .nav-link {
+    color: var(--light-brown);
+}
+
+/* Background Colors - Dark Mode */
+body.dark-mode .bg-white {
+    background-color: var(--dark-brown) !important;
+}
+
+body.dark-mode .bg-\[\#F5DEB3\] {
+    background-color: var(--dark) !important;
+}
+
+body.dark-mode .bg-\[\#FAF0E6\] {
+    background-color: var(--dark) !important;
+}
+
+/* Text Colors - Dark Mode */
+body.dark-mode .text-gray-600 {
+    color: var(--light-brown) !important;
+}
+
+body.dark-mode .text-gray-700 {
+    color: var(--light-brown) !important;
+}
+
+body.dark-mode .text-gray-800 {
+    color: var(--light-brown) !important;
+}
+
+body.dark-mode .text-\[\#5D4037\] {
+    color: var(--light-brown) !important;
+}
+
+body.dark-mode .text-\[\#2C1810\] {
+    color: var(--light-brown) !important;
+}
+
+/* Custom CSS Variables for Text Colors - Dark Mode */
+body.dark-mode .text-\[var\(--primary\)\] {
+    color: var(--accent) !important;
+}
+
+body.dark-mode .text-\[var\(--accent\)\] {
+    color: var(--accent) !important;
+}
+
+body.dark-mode .text-\[var\(--dark-brown\)\] {
+    color: var(--light-brown) !important;
+}
+
+body.dark-mode .text-\[var\(--light-brown\)\] {
+    color: var(--light-brown) !important;
+}
+
+/* Timeline - Dark Mode */
+body.dark-mode .timeline::after {
+    background-color: var(--accent);
+}
+
+body.dark-mode .timeline-item::after {
+    background-color: var(--dark-brown);
+    border-color: var(--accent);
+}
+
+body.dark-mode .timeline-content {
+    background-color: var(--dark-brown);
+    color: var(--light-brown) !important;
+}
+
+/* Hero Text - Dark Mode */
+body.dark-mode .hero-bg h1,
+body.dark-mode .hero-bg h2,
+body.dark-mode .hero-bg h3,
+body.dark-mode .hero-bg p {
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Borders - Dark Mode */
+body.dark-mode .border-gray-200,
+body.dark-mode .border-gray-300 {
+    border-color: #6b7280 !important;
+}
+
+/* Footer - Dark Mode */
+body.dark-mode footer {
+    background: linear-gradient(to top, var(--dark), #050811) !important;
+}
+
+body.dark-mode footer a {
+    color: #9ca3af !important;
+}
+
+body.dark-mode footer a:hover {
+    color: var(--accent) !important;
+}
+
+/* Links - Dark Mode */
+body.dark-mode a:not(.nav-link) {
+    color: var(--accent) !important;
+}
+
+body.dark-mode a:not(.nav-link):hover {
+    color: var(--secondary) !important;
+}
+
+/* Badges and Tags - Dark Mode */
+body.dark-mode .bg-\[\#8B4513\] {
+    background-color: var(--accent) !important;
+}
+
+body.dark-mode .text-\[\#8B4513\] {
+    color: var(--accent) !important;
+}
+
+/* Opacity Backgrounds - Dark Mode */
+body.dark-mode .bg-opacity-20 {
+    background-color: rgba(210, 105, 30, 0.2) !important;
+}
+
+/* ===== ANIMATIONS ===== */
+.floating {
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Page Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.animate-element {
+    opacity: 1;
+    transform: translate(0);
+    transition: all 0.6s ease;
+}
+
+.card-expand {
+    transition: all 0.5s ease;
+}
+
+.card-expand:hover {
+    transform: scale(1.05);
+}
+
+/* Timeline Responsive */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item::after {
+        left: 18px;
+    }
+    
+    .right {
+        left: 0%;
+    }
+}
+
+

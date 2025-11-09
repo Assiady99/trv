@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeddah - Places to Visit in Saudi Arabia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-full flex items-center justify-center text-white font-bold text-xl glow">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <span class="ml-3 text-xl font-black gradient-text">Saudi Arabia</span>
+                </div>
+                
+               <div class="hidden lg:flex space-x-8">
+                    <a href="index.html" class="nav-link text-lg font-medium">Home</a>
+                    <a href="index.html" class="nav-link text-lg font-medium">About</a>
+                    <a href="index.html" class="nav-link text-lg font-medium active">Discover</a>
+                    <a href="index.html" class="nav-link text-lg font-medium">Places</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="theme-toggle p-2 rounded-full transition">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                    
+                    <div class="lg:hidden">
+                        <button id="menu-toggle" class="text-[var(--dark-brown)] dark:text-[var(--light-brown)] focus:outline-none text-xl">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-6 pb-4 space-y-4">
+                <a href="index.html" class="block py-2 text-lg font-medium">Home</a>
+                <a href="index.html" class="block py-2 text-lg font-medium">About</a>
+                <a href="index.html" class="block py-2 text-lg font-medium">Discover</a>
+                <a href="index.html" class="block py-2 text-lg font-medium border-l-4 border-[var(--primary)] pl-4 active">Places</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jeddah Hero -->
+    <section class="py-20 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">Jeddah</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">The Bride of the Red Sea - Where Tradition Meets Modernity</p>
+        </div>
+    </section>
+
+    <!-- Jeddah Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div class="rounded-2xl overflow-hidden shadow-xl slide-in-left">
+                    <img src="https://images.unsplash.com/photo-1578558422230-4d0194e1441c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Jeddah" class="w-full h-auto object-cover">
+                </div>
+                <div class="slide-in-right">
+                    <h2 class="text-3xl font-black mb-6 gradient-text">Explore Jeddah</h2>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        Jeddah is a vibrant port city on the Red Sea, known for its historic Al-Balad district, stunning corniche, and modern shopping malls. As the gateway to the holy cities of Mecca and Medina, Jeddah blends tradition with contemporary life.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Al-Balad Historical District</h4>
+                            <p>Explore the UNESCO World Heritage site with its traditional coral houses.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">King Fahd's Fountain</h4>
+                            <p>Witness the world's tallest fountain, reaching up to 312 meters.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Red Sea Beaches</h4>
+                            <p>Enjoy pristine beaches and coral reefs perfect for diving and snorkeling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Attractions -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 text-center gradient-text">Top Attractions in Jeddah</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1580052614387-03ceb7c16d8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Al-Balad" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-black mb-2">Al-Balad</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Historic district with traditional architecture and bustling souks</p>
+                            <span class="inline-block bg-[var(--primary)] text-white text-sm px-3 py-1 rounded-full">UNESCO Site</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1571887259330-7d3a71ff9313?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                                 alt="Corniche" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-black mb-2">Jeddah Corniche</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">30km coastal resort area with parks, beaches, and restaurants</p>
+                            <span class="inline-block bg-[var(--accent)] text-white text-sm px-3 py-1 rounded-full">Coastal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544628936-7a0e8e4c3b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Floating Mosque" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-black mb-2">Floating Mosque</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Stunning mosque that appears to float on the Red Sea</p>
+                            <span class="inline-block bg-[var(--secondary)] text-white text-sm px-3 py-1 rounded-full">Religious</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel Tips -->
+            <div class="bg-white dark:bg-[var(--dark)] rounded-2xl p-8 mb-12">
+                <h2 class="text-3xl md:text-4xl font-black mb-6 text-center gradient-text">Jeddah Travel Tips</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="fade-in ">
+                        <h3 class="text-xl font-black mb-4">Best Time to Visit</h3>
+                        <p class="mb-4">October to April offers the most pleasant weather for exploring Jeddah's outdoor attractions.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Winter (Nov-Feb): Mild temperatures, perfect for sightseeing</li>
+                            <li>Spring (Mar-Apr): Warm but comfortable for beach activities</li>
+                            <li>Summer (May-Sep): Very hot and humid, best for indoor activities</li>
+                        </ul>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="text-xl font-black mb-4">Getting Around</h3>
+                        <p class="mb-4">Jeddah has various transportation options to explore the city comfortably.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Taxis and ride-sharing services widely available</li>
+                            <li>Rental cars for more flexibility</li>
+                            <li>Walking ideal in Al-Balad historic area</li>
+                            <li>Public buses connect major areas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="text-center">
+                <a href="index.html" class="inline-flex items-center bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition duration-500 transform hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Places
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-t from-[var(--dark)] to-[#050811] py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-6 lg:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-full flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <span class="ml-3 text-lg font-black gradient-text">Saudi Arabia</span>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Land of Wonders, Heart of Arabia</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Home</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">About</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Discover</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Places</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Saudi Arabia Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

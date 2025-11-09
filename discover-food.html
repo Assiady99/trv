@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Cuisine - Discover Saudi Arabia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-full flex items-center justify-center text-white font-bold text-xl glow">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <span class="ml-3 text-xl font-black gradient-text">Saudi Arabia</span>
+                </div>
+                
+                <div class="hidden lg:flex space-x-8">
+                    <a href="index.html" class="nav-link text-lg font-medium">Home</a>
+                    <a href="index.html" class="nav-link text-lg font-medium">About</a>
+                    <a href="index.html" class="nav-link text-lg font-medium active">Discover</a>
+                    <a href="index.html" class="nav-link text-lg font-medium">Places</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="theme-toggle p-2 rounded-full transition">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                    
+                    <div class="lg:hidden">
+                        <button id="menu-toggle" class="text-[var(--dark-brown)] dark:text-[var(--light-brown)] focus:outline-none text-xl">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-6 pb-4 space-y-4">
+                <a href="index.html" class="block py-2 text-lg font-medium">Home</a>
+                <a href="index.html" class="block py-2 text-lg font-medium">About</a>
+                <a href="index.html" class="block py-2 text-lg font-medium">Discover</a>
+                <a href="index.html" class="block py-2 text-lg font-medium border-l-4 border-[var(--primary)] pl-4 active">Places</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Food Hero -->
+    <section class="py-20 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">Saudi Cuisine</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">A rich tapestry of flavors influenced by history and geography</p>
+        </div>
+    </section>
+
+    <!-- Food Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 slide-in-left">
+                <div>
+                    <h2 class="text-3xl font-black mb-6 gradient-text">Traditional Flavors</h2>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        Saudi cuisine is a rich tapestry of flavors influenced by the country's history and geography. From the aromatic Kabsa to the savory Mandi, each dish tells a story of tradition and hospitality.
+                    </p>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        Experience the warmth of Saudi hospitality through its food, where meals are often shared communally, reflecting the culture's emphasis on family and community.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-[var(--primary)] bg-opacity-20 text-[var(--light)] dark:text-[var(--accent)] px-4 py-2 rounded-full">Kabsa</span>
+                        <span class="bg-[var(--primary)] bg-opacity-20 text-[var(--light)] dark:text-[var(--accent)] px-4 py-2 rounded-full">Mandi</span>
+                        <span class="bg-[var(--primary)] bg-opacity-20 text-[var(--light)] dark:text-[var(--accent)] px-4 py-2 rounded-full">Jareesh</span>
+                        <span class="bg-[var(--primary)] bg-opacity-20 text-[var(--light)] dark:text-[var(--accent)] px-4 py-2 rounded-full">Mutabbaq</span>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-xl slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1981&q=80" 
+                         alt="Saudi Food" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Popular Dishes -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 text-center gradient-text">Popular Saudi Dishes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass p-6 rounded-2xl text-center card-hover fade-in">
+                        <div class="bg-[var(--primary)] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-utensils text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Kabsa</h3>
+                        <p class="text-gray-600 dark:text-gray-300">The national dish of Saudi Arabia, featuring spiced rice with meat, vegetables, and aromatic spices.</p>
+                    </div>
+                    
+                    <div class="glass p-6 rounded-2xl text-center card-hover fade-in">
+                        <div class="bg-[var(--accent)] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-drumstick-bite text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Mandi</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Traditional dish of meat and rice cooked in a underground pit, giving it a unique smoky flavor.</p>
+                    </div>
+                    
+                    <div class="glass p-6 rounded-2xl text-center card-hover fade-in">
+                        <div class="bg-[var(--secondary)] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bread-slice text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Jareesh</h3>
+                        <p class="text-gray-600 dark:text-gray-300">A savory dish made from crushed wheat cooked with meat, similar to porridge.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dining Culture -->
+            <div class="bg-[var(--light-brown)] dark:bg-[var(--dark)] rounded-2xl p-8 mb-12">
+                <h2 class="text-3xl md:text-4xl font-black mb-6 text-center gradient-text">Saudi Dining Culture</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="fade-in text-orange-900">
+                        <p class="mb-4 text-lg leading-relaxed">
+                            Dining in Saudi Arabia is more than just eating - it's a social experience deeply rooted in tradition and hospitality. Meals are often shared from large communal platters, reflecting the culture's emphasis on family and community.
+                        </p>
+                        <p class="mb-4 text-lg leading-relaxed">
+                            Traditional Saudi meals begin with dates and Arabic coffee, followed by the main course, and conclude with sweet desserts and more coffee. The famous Saudi hospitality means guests are always offered the best portions and treated with utmost respect.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2 text-lg">
+                            <li>Meals are typically eaten with the right hand</li>
+                            <li>Communal dining from large shared platters</li>
+                            <li>Generous hospitality and food sharing</li>
+                            <li>Traditional seating on floor cushions</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-xl fade-in">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80" 
+                             alt="Saudi Dining" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="text-center">
+                <a href="index.html" class="inline-flex items-center bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition duration-500 transform hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Discover
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-t from-[var(--dark)] to-[#050811] py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-6 lg:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-full flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <span class="ml-3 text-lg font-black gradient-text">Saudi Arabia</span>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Land of Wonders, Heart of Arabia</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Home</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">About</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Discover</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Places</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Saudi Arabia Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

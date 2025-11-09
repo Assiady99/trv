@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyadh - Places to Visit in Saudi Arabia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-full flex items-center justify-center text-white font-bold text-xl glow">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <span class="ml-3 text-xl font-black gradient-text">Saudi Arabia</span>
+                </div>
+                
+                 <div class="hidden lg:flex space-x-8">
+                    <a href="index.html" class="nav-link text-lg font-medium">Home</a>
+                    <a href="index.html" class="nav-link text-lg font-medium">About</a>
+                    <a href="index.html" class="nav-link text-lg font-medium active">Discover</a>
+                    <a href="index.html" class="nav-link text-lg font-medium">Places</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="theme-toggle p-2 rounded-full transition">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                    
+                    <div class="lg:hidden">
+                        <button id="menu-toggle" class="text-[var(--dark-brown)] dark:text-[var(--light-brown)] focus:outline-none text-xl">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-6 pb-4 space-y-4">
+                <a href="index.html" class="block py-2 text-lg font-medium">Home</a>
+                <a href="index.html" class="block py-2 text-lg font-medium">About</a>
+                <a href="index.html" class="block py-2 text-lg font-medium">Discover</a>
+                <a href="index.html" class="block py-2 text-lg font-medium border-l-4 border-[var(--primary)] pl-4 active">Places</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Riyadh Hero -->
+    <section class="py-20 bg-gradient-to-br from-[var(--secondary)] to-[var(--primary)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">Riyadh</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">The Capital - Where Tradition Meets Modern Innovation</p>
+        </div>
+    </section>
+
+    <!-- Riyadh Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div class="slide-in-left">
+                    <h2 class="text-3xl font-black mb-6 gradient-text">Discover Riyadh</h2>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        Riyadh is the modern capital of Saudi Arabia, a bustling metropolis that seamlessly blends ultra-modern architecture with traditional Saudi culture. From towering skyscrapers to historical forts, Riyadh offers a diverse urban experience.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Kingdom Centre</h4>
+                            <p>Iconic skyscraper with a sky bridge offering panoramic city views.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Masmak Fortress</h4>
+                            <p>Historical clay and mud-brick fort, a symbol of Saudi unification.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Diriyah</h4>
+                            <p>The original home of the Saudi royal family and a UNESCO World Heritage site.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-xl slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1571887259330-7d3a71ff9313?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                         alt="Riyadh" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Modern Landmarks -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 text-center gradient-text">Modern Landmarks</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586724237565-7c5a8f5c6f48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Kingdom Centre" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-black mb-2">Kingdom Centre</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">302-meter skyscraper with luxury shopping and sky bridge</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[var(--accent)] font-bold">Architectural Marvel</span>
+                                <span class="bg-[var(--primary)] text-white text-sm px-3 py-1 rounded-full">Landmark</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544628936-7a0e8e4c3b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Boulevard Riyadh City" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-black mb-2">Boulevard Riyadh City</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Entertainment district with theme parks and cultural events</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[var(--accent)] font-bold">Entertainment Hub</span>
+                                <span class="bg-[var(--secondary)] text-white text-sm px-3 py-1 rounded-full">Modern</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Historical Sites -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 text-center gradient-text">Historical Sites</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass p-6 rounded-2xl fade-in">
+                        <h3 class="text-xl font-black mb-4">Masmak Fortress</h3>
+                        <p class="mb-4">This clay and mud-brick fort played a crucial role in the unification of Saudi Arabia. Today, it houses a museum that showcases artifacts and exhibits from the unification era.</p>
+                        <div class="flex items-center text-[var(--accent)]">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>Open daily 8AM - 9PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="glass p-6 rounded-2xl fade-in">
+                        <h3 class="text-xl font-black mb-4">Diriyah</h3>
+                        <p class="mb-4">The original home of the Saudi royal family and the first Saudi state. This UNESCO World Heritage site features restored mud-brick buildings, museums, and cultural centers.</p>
+                        <div class="flex items-center text-[var(--accent)]">
+                            <i class="fas fa-landmark mr-2"></i>
+                            <span>UNESCO World Heritage Site</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="text-center">
+                <a href="index.html" class="inline-flex items-center bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition duration-500 transform hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Places
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-t from-[var(--dark)] to-[#050811] py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-6 lg:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-full flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <span class="ml-3 text-lg font-black gradient-text">Saudi Arabia</span>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Land of Wonders, Heart of Arabia</p>
+                </div>
+                
+              <div class="flex space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Home</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">About</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Discover</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Places</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Saudi Arabia Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
