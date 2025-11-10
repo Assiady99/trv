@@ -25,7 +25,7 @@ class SaudiTourismApp {
 
         // Toggle theme on button click
         themeToggle.addEventListener('click', () => {
-            const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+            const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             this.applyTheme(newTheme, false);
         });
@@ -35,13 +35,13 @@ class SaudiTourismApp {
         const themeIcon = document.getElementById('theme-icon');
 
         if (theme === 'dark') {
-            document.body.classList.add('dark-mode');
+            document.documentElement.classList.add('dark');
             if (themeIcon) {
                 themeIcon.className = 'fas fa-sun';
             }
             localStorage.setItem('saudi-theme', 'dark');
         } else {
-            document.body.classList.remove('dark-mode');
+            document.documentElement.classList.remove('dark');
             if (themeIcon) {
                 themeIcon.className = 'fas fa-moon';
             }
@@ -88,7 +88,7 @@ class SaudiTourismApp {
     // Animations
     initializeAnimations() {
         const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-        
+
         // Reset animations first
         animatedElements.forEach(el => {
             el.classList.remove('animate-element');
@@ -103,12 +103,83 @@ class SaudiTourismApp {
                     }, index * 150);
                 }
             });
-        }, { 
+        }, {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         });
 
-        animatedElements.forEach(el => observer.observe(el));
+        animatedElements.forEach(el => {
+            observer.observe(el);
+            // Check if element is already in view
+            const rect = el.getBoundingClientRect();
+            const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+            if (isInView) {
+                setTimeout(() => {
+                    el.classList.add('animate-element');
+                }, 100);
+            }
+        });
+
+        // Initialize stagger animations
+        this.initializeStaggerAnimations();
+
+        // Initialize particle effects
+        this.initializeParticles();
+
+    // Initialize card animations
+        this.initializeCardAnimations();
+    }
+
+    // Card Animations
+    initializeCardAnimations() {
+        const cards = document.querySelectorAll('.card-hover');
+
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-15px) scale(1.02)';
+                card.style.boxShadow = '0 25px 50px -12px rgba(193, 155, 98, 0.25)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+                card.style.boxShadow = '';
+            });
+        });
+    }
+
+    // Stagger Animations
+    initializeStaggerAnimations() {
+        const staggerContainers = document.querySelectorAll('.stagger-animation');
+
+        staggerContainers.forEach(container => {
+            const children = container.children;
+            Array.from(children).forEach((child, index) => {
+                child.style.transitionDelay = `${index * 0.1}s`;
+                child.classList.add('animate-element');
+            });
+        });
+    }
+
+    // Particle Effects
+    initializeParticles() {
+        const particleContainers = document.querySelectorAll('.particles');
+
+        particleContainers.forEach(container => {
+            // Clear existing particles
+            container.innerHTML = '';
+
+            // Create particles
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.width = Math.random() * 4 + 2 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                container.appendChild(particle);
+            }
+        });
     }
 
     // Active Links
@@ -185,7 +256,7 @@ window.addEventListener('beforeunload', function() {
 // Global theme control functions
 window.saudiApp = {
     toggleTheme: function() {
-        const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+        const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
         const app = new SaudiTourismApp();
@@ -202,3 +273,30 @@ window.saudiApp = {
         app.applyTheme('light', false);
     }
 };
+function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 10 + 5;
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 20 + 10;
+                const animationDelay = Math.random() * 5;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}%`;
+                particle.style.animationDuration = `${animationDuration}s`;
+                particle.style.animationDelay = `${animationDelay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+         // Initialize website on load
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            initScrollAnimations();
+        });
